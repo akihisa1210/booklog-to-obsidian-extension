@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Booklog to Obsidian</h1>
+
+  <form id="settings-form">
+    <label for="api-key">Obsidian API Key</label>
+    <input type="password" id="api-key" placeholder="API Key">
+
+    <label for="protocol">Protocol</label>
+    <select id="protocol">
+      <option value="http">HTTP (recommended)</option>
+      <option value="https">HTTPS</option>
+    </select>
+
+    <label for="port">Obsidian API Port</label>
+    <input type="number" id="port" value="27123">
+
+    <label for="books-dir">Books directory</label>
+    <input type="text" id="books-dir" placeholder="Books/Booklog">
+
+    <button type="submit" id="save-btn">Save Settings</button>
+  </form>
+
+  <hr>
+
+  <button id="sync-btn">Sync Now</button>
+  <div id="status"></div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

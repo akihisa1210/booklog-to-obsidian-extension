@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Booklog to Obsidian",
+  "version": "1.0.0",
+  "description": "Sync Booklog books to Obsidian via Local REST API",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://booklog.jp/*",
+    "https://download.booklog.jp/*",
+    "https://127.0.0.1:27124/*",
+    "http://127.0.0.1:27123/*",
+    "http://127.0.0.1:27124/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
